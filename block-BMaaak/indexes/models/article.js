@@ -4,7 +4,8 @@ let articleSchema = new Schema({
     title: String,
     description: String,
     tags: [String]
-}, {timestamps: true});
+}, 
+{timestamps: true});
 
 articleSchema.index({tags: 1});
 articleSchema.index({title: "text", description: "text"});
