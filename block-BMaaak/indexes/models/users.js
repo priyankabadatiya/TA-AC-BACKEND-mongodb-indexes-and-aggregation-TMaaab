@@ -14,6 +14,8 @@ let userSchema = new Schema({
 }, {timestamps: true});
 
 
-userSchema.index({'address.country': 1, 'address.state': unique});
+userSchema.index({email:1,unique:true})
+userSchema.index({username:1,unique:true})
+userSchema.index({state:1,city:1})
 
 module.exports = mongoose.model("User", userSchema);
